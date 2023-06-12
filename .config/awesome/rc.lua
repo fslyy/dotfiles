@@ -58,7 +58,7 @@ beautiful.init(theme_path)
 --
 -- This is used later as the default terminal and editor to run.
 terminal = "kitty"
-editor = os.getenv("vim") or "nano"
+editor = os.getenv("nvim") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -563,3 +563,4 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- Autostart
 awful.spawn.with_shell("picom")
 awful.spawn.with_shell("/home/felix/.config/polybar/launch.sh")
+
