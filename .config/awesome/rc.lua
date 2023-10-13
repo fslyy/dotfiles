@@ -367,7 +367,10 @@ globalkeys = gears.table.join(
     awful.key({ }, "#121", function () awful.util.spawn("amixer -q sset Master toggle") end),
     --brightness_widget
     awful.key({ }, "#232", function () awful.util.spawn("brightnessctl set 10-%") end),
-    awful.key({ }, "#233", function () awful.util.spawn("brightnessctl set +10%") end)
+    awful.key({ }, "#233", function () awful.util.spawn("brightnessctl set +10%") end),
+
+    -- flameshot
+    awful.key({}, "Print", function () awful.util.spawn("flameshot gui") end)
 )
 
 clientkeys = gears.table.join(
