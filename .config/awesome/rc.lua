@@ -499,7 +499,11 @@ awful.rules.rules = {
                      placement = awful.placement.no_overlap+awful.placement.no_offscreen
      }
     },
-
+    { rule = { instance = "polybar" },
+      properties = { border_width = false,
+      		     focusable = false
+		   }
+    },
     -- Floating clients.
     { rule_any = {
         instance = {
@@ -559,8 +563,11 @@ end)
 --    c:emit_signal("request::activate", "mouse_enter", {raise = false})
 --end)
 
-client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
-client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+--change between focused and unfocused window
+client.connect_signal("focus", function(c) c.border_width = 2 c.border_color = beautiful.border_focus end)
+client.connect_signal("unfocus", function(c) c.border_width = 0 end)
+-- disable gap when only 1 window active
+beautiful.gap_single_client = false
 -- }}}
 --
 -- Autostart
