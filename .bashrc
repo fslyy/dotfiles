@@ -11,10 +11,14 @@ alias spt='systemctl --user restart spotifyd.service&&spt'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias allp='systemctl list-units --type=service --state=running'
 PS1='[\u@\h \W]\$ '
-neofetch --size 360
 LS_COLORS='di=0;36:fi=0;32:*.jpg=0;35:*.png=0;35'
 export LS_COLORS
 
+# open neofetch on first terminal
+LIVE_COUNTER=$(ps a | awk '{print $2}' | grep -vi "tty*" | uniq | wc -l);
+if [ $LIVE_COUNTER -eq 1 ]; then
+     neofetch
+fi
 
 # add jdk 21 to path and set java_home
 
