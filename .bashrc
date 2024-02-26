@@ -7,7 +7,6 @@
 alias vim='nvim'
 alias ls='lsd'
 alias c='clear'
-alias spt='systemctl --user restart spotifyd.service&&spt'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias allp='systemctl list-units --type=service --state=running'
 PS1='[\u@\h \W]\$ '
