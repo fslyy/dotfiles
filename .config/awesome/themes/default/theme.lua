@@ -69,6 +69,12 @@ theme.menu_width  = dpi(100)
 -- you wish and access them by using
 -- beautiful.variable in your rc.lua
 --theme.bg_widget = "#cc0000"
+theme.hotkeys_bg = theme.bg_normal
+theme.hotkeys_fg = theme.fg_normal
+theme.hotkeys_label_bg = theme.fg_normal
+theme.hotkeys_label_fg = theme.bg_normal
+theme.hotkeys_border_color = theme.border_focus
+theme.hotkeys_modifiers_fg = theme.border_focus
 
 -- Define the image to load
 theme.titlebar_close_button_normal = themes_path.."default/titlebar/close_normal.png"
