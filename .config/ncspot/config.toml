@@ -2,9 +2,16 @@ initial_screen = "library"
 
 library_tabs = ["playlists", "podcasts", "artists"]
 
-repeat = playlist
+repeat = "playlist"
 
 hide_display_names = true
+
+statusbar_format = "%artists - %title"
+
+[track_format]
+left = "%artists - %title"
+center = "%album"
+right = "%duration"
 
 [theme]
 primary = "light white"
@@ -21,3 +28,7 @@ statusbar_progress = "green"
 statusbar_bg = "green"
 cmdline = "light white"
 cmdline_bg = "black"
+
+[credentials]
+username_cmd = "echo fefepenn@gmail.com"
+password_cmd = "bw get password spotify"
