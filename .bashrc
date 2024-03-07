@@ -10,6 +10,7 @@ alias c='clear'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias allp='systemctl list-units --type=service --state=running'
 alias spt='ncspot'
+alias pihole='ssh felixpi@192.168.178.33'
 PS1='[\u@\h \W]\$ '
 LS_COLORS='di=0;36:fi=0;32:*.jpg=0;35:*.png=0;35'
 export LS_COLORS
