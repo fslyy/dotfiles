@@ -504,6 +504,9 @@ awful.rules.rules = {
       		     focusable = false
 		   }
     },
+-- firefox acting up -> forced tiling 
+     { rule = { class = "firefox" },
+       properties = { opacity = 1, maximized = false, floating = false } }, 
     -- Floating clients.
     { rule_any = {
         instance = {
