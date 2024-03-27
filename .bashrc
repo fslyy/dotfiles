@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 alias vim='nvim'
-alias ls='lsd'
+alias ls='eza'
 alias c='clear'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias allp='systemctl list-units --type=service --state=running'
