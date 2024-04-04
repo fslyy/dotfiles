@@ -14,6 +14,8 @@ alias pihole='ssh felixpi@192.168.178.32'
 
 PS1='[\u@\h \W]\$ '
 
+LS_COLORS='di=0;36:fi=0;32:*.jpg=0;35:*.png=0;35'
+export LS_COLORS
 
 # open neofetch on first terminal
 LIVE_COUNTER=$(ps a | awk '{print $2}' | grep -vi "tty*" | uniq | wc -l);
