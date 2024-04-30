@@ -30,6 +30,17 @@ theme.border_normal = "#56635f"
 theme.border_focus  = "#56635f"
 theme.border_marked = "#91231c"
 
+-- notifications
+theme.notification_bg = "#282828"
+theme.notification_fg = "#d4be98"
+theme.notification_font = "FiraCode Nerd Font 12"
+theme.notification_border_width = 0
+theme.notification_border_color = "#282828"
+theme.notification_margin = 10
+theme.notification_width = nil
+theme.notification_height = nil
+
+
 -- There are other variable sets
 -- overriding the default one when
 -- defined, the sets are:

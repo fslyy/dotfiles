@@ -50,6 +50,9 @@ do
     end)
 end
 -- }}}
+-- {{{ notifications
+
+-- }}}
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
@@ -577,4 +580,3 @@ beautiful.gap_single_client = false
 -- Autostart
 awful.spawn.with_shell("picom")
 awful.spawn.with_shell("/home/felix/.config/polybar/launch.sh")
-
