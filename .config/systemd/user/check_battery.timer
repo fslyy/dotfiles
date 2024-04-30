@@ -1,0 +1,9 @@
+[Unit]
+Description=Timer to check battery status
+
+[Timer]
+OnCalendar=*:0/15
+Unit=check_battery.service
+
+[Install]
+WantedBy=timers.target
