@@ -52,6 +52,15 @@ end
 -- }}}
 -- {{{ notifications
 
+--	naughty.notification {
+--		title = "Now Playing:",
+--		text = "`nc -W 1 -U /run/user/1000/ncspot/ncspot.sock | jq '.playable.title'` : `nc -W 1 -U /run/user/1000/ncspot/ncspot.sock | jq '.playable.artists[0]'`",
+--		icon = /usr/share/icons/Gruvbox-Plus-Dark/apps/48/artemanufrij.playmymusic.svg,
+--		icon_size = 10,
+--		timeout = 5
+--	}
+
+
 -- }}}
 
 -- {{{ Variable definitions
@@ -365,16 +374,17 @@ globalkeys = gears.table.join(
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
               {description = "show the menubar", group = "launcher"}),
-    --volume_widget
+    -- volume
     awful.key({ }, "#122", function () awful.util.spawn("amixer -q sset Master 10%-") end),
     awful.key({ }, "#123", function () awful.util.spawn("amixer -q sset Master 10%+") end),
     awful.key({ }, "#121", function () awful.util.spawn("amixer -q sset Master toggle") end),
-    --brightness_widget
+    -- brightness
     awful.key({ }, "#232", function () awful.util.spawn("brightnessctl set 10-%") end),
     awful.key({ }, "#233", function () awful.util.spawn("brightnessctl set +10%") end),
 
     -- flameshot
     awful.key({}, "Print", function () awful.util.spawn("flameshot gui") end)
+
 )
 
 clientkeys = gears.table.join(

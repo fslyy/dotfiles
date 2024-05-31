@@ -2,7 +2,7 @@
 Description=Timer to check battery status
 
 [Timer]
-OnCalendar=*:0/15
+OnCalendar=*:0/2
 Unit=check_battery.service
 
 [Install]
