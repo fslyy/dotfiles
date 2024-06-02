@@ -3,6 +3,7 @@ return {
 	config = function()
 		local lsp = require("lspconfig")
 		lsp["lua_ls"].setup({})
+		lsp.texlab.setup({})
 	end,
 	dependencies = {
 		{ "folke/neodev.nvim" },
@@ -14,7 +15,10 @@ return {
 			init = function()
 				vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
 			end,
-			opts = { format_on_save = { timeout_ms = 500, lsp_fallback = true }, formatters_by_ft = { lua = { "stylua" } } },
+			opts = {
+				format_on_save = { timeout_ms = 500, lsp_fallback = true },
+				formatters_by_ft = { lua = { "stylua" } },
+			},
 		},
 	},
 }

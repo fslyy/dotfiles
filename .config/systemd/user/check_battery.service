@@ -2,7 +2,7 @@
 Description=check-battery
 
 [Service]
-ExecStart=/bin/bash -c '[ $(cat /sys/class/power_supply/BAT0/capacity) -lt 15 ] && [ "$(cat /sys/class/power_supply/BAT0/status)" = "Discharging" ] && DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus notify-send -i /usr/share/icons/Gruvbox-Plus-Dark/status/48/battery-empty.svg "Battery Low" "Please charge now"'
+ExecStart=/bin/bash -c '[ $(cat /sys/class/power_supply/BAT0/capacity) -lt 15 ] && [ "$(cat /sys/class/power_supply/BAT0/status)" = "Discharging" ] && DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus notify-send -i /usr/share/icons/Gruvbox-Plus-Dark/status/48/battery-empty.svg "Battery Low" "Please charge now" || exit 0'
 
 [Install]
 WantedBy=multi-user.target
