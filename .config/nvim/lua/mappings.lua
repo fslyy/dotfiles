@@ -1,3 +1,4 @@
 local km = vim.keymap
+local api = require("nvim-tree.api")
 
--- keymap.set("<leader>t", require("nvim-tree.api").tree.toggle, { silent = true, desc = "toggle nvim-tree" })
+km.set("n", "<C-t>", api.tree.toggle, { silent = true, desc = "toggle nvim-tree" })
