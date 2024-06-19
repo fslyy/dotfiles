@@ -1,4 +1,9 @@
-# init config
+-- init config
+local o = vim.o
+o.expandtab = true
+o.smartindent = true
+o.tabstop = 2
+o.shiftwidth = 2
 
 vim.g.mapleader = ","
 
@@ -13,10 +18,8 @@ table.insert(plugins, require("plugins/lsp"))
 table.insert(plugins, require("plugins/cmp"))
 table.insert(plugins, require("plugins/nvim-tree"))
 table.insert(plugins, require("plugins/which-key"))
+table.insert(plugins, require("plugins/dashboard-nvim"))
 
 require("lazy").setup(plugins)
 
 require("mappings")
-
-
-

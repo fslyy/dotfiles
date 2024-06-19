@@ -427,6 +427,11 @@ globalkeys = gears.table.join(
 	-- flameshot
 	awful.key({}, "Print", function()
 		awful.util.spawn("flameshot gui")
+	end),
+
+	-- suspend on keypress
+	awful.key({ modkey }, "ß", function()
+		awful.util.spawn("light-locker-command -l")
 	end)
 )
 
@@ -627,5 +632,4 @@ beautiful.gap_single_client = false
 -- }}}
 --
 -- Autostart
-awful.spawn.with_shell("picom")
-awful.spawn.with_shell("/home/felix/.config/polybar/launch.sh")
+awful.spawn.with_shell("/home/felix/.config/awesome/autorun.sh")
