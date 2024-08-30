@@ -431,7 +431,7 @@ globalkeys = gears.table.join(
 
 	-- suspend on keypress
 	awful.key({ modkey }, "ß", function()
-		awful.util.spawn("light-locker-command -l")
+		awful.util.spawn("i3lock -i Pictures/Bluescreen_locker.png")
 	end)
 )
 
