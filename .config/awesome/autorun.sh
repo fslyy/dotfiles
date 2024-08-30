@@ -6,6 +6,5 @@ run() {
 	fi
 }
 
-run "light-locker"
 run "picom"
 run "/home/felix/.config/polybar/launch.sh"
