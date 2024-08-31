@@ -431,7 +431,7 @@ globalkeys = gears.table.join(
 
 	-- suspend on keypress
 	awful.key({ modkey }, "ß", function()
-		awful.util.spawn("xset s activate")
+		awful.util.spawn("xset s activate") -- triggers xset lock -> xss-lock -> i3lock (with command in spawn command down)
 	end)
 )
 
@@ -634,4 +634,4 @@ beautiful.gap_single_client = false
 -- Autostart
 awful.spawn.with_shell("/home/felix/.config/awesome/autorun.sh")
 -- Doesnt want to be in the autorun script for some fucking reason so it has his own spawn command
-awful.spawn.with_shell("xss-lock -s ${XDG_SESSION_ID} -- i3lock -n -e -i Pictures/Bluescreen_locker.png & xset s 180")
+awful.spawn.with_shell("xss-lock -s ${XDG_SESSION_ID} -- i3lock -n -e -i Pictures/Bluescreen_locker.png & xset s 300") -- i3lock could be replaced by lock script (example: blur desktop)
