@@ -587,4 +587,4 @@ beautiful.gap_single_client = false
 -- Autostart
 awful.spawn.with_shell("/home/felix/.config/awesome/autorun.sh")
 -- Doesnt want to be in the autorun script for some fucking reason so it has his own spawn command
-awful.spawn.with_shell("xss-lock -s ${XDG_SESSION_ID} -- /home/felix/.config/awesome/lock_and_blur.sh & xset s 420") -- i3lock could be replaced by lock script (example: blur desktop)
+awful.spawn.with_shell("xss-lock -s ${XDG_SESSION_ID} -- /home/felix/.config/awesome/lock_and_blur.sh & xset s 420") -- triggers custom lock script which blurs screen
