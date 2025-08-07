@@ -15,19 +15,19 @@ return function(s)
 			-- Left widgets.
 			{
 				layout = wibox.layout.fixed.horizontal,
-				module.launcher(),
 				module.taglist(s),
 				s.mypromptbox,
 			},
 			-- Middle widgets.
-			module.tasklist(s),
+			{
+				layout = wibox.layout.fixed.horizontal,
+				s.mypromptbox,
+			},
 			-- Right widgets.
 			{
 				layout = wibox.layout.fixed.horizontal,
-				awful.widget.keyboardlayout(), -- Keyboard map indicator and switcher.
 				wibox.widget.systray(),
 				wibox.widget.textclock(), -- Create a textclock widget.
-				module.layoutbox(s),
 			},
 		},
 	})

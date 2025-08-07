@@ -32,8 +32,6 @@ require("binds")
 require("config.rules")
 
 -- Autostart
-awful.spawn.with_shell("/home/felix/.config/awesome/scripts/autorun.sh")
+awful.spawn.with_shell("/home/felix/.scripts/autorun.sh")
 -- Doesnt want to be in the autorun script for some fucking reason so it has his own spawn command
-awful.spawn.with_shell(
-	"xss-lock -s ${XDG_SESSION_ID} -- /home/felix/.config/awesome/scripts/lock_and_blur.sh & xset s 600"
-) -- triggers custom lock script which blurs screen
+awful.spawn.with_shell("xss-lock -s ${XDG_SESSION_ID} -- /home/felix/.scripts/lock_and_blur.sh & xset s 600") -- triggers custom lock script which blurs screen
