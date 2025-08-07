@@ -7,4 +7,4 @@ run() {
 }
 
 run "picom"
-run "/home/felix/.config/polybar/launch.sh"
+#run "/home/felix/.config/polybar/launch.sh"

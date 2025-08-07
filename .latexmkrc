@@ -1,4 +1,2 @@
-$pdflatex ="lualatex %O %S";
-#$pdf_mode = 4; # sets lualatex to default engine.
-#$dvi_mode = 0;
-#$postscript_mode = 0;
+$latex = 'lualatex -synctex=1 -interaction=nonstopmode -file-line-error %O %S';
+$pdf_mode = 1;
