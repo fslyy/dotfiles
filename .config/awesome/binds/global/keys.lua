@@ -39,8 +39,11 @@ awful.keyboard.append_global_keybindings({
 
 	-- custom keybindings
 	awful.key({ modkey }, "space", function()
-		awful.spawn("dmenu_run -nb '#282828' -nf '#e78a4e' -sf '#d4be98'")
-	end, { description = "launch dmenu", group = "felix" }),
+		awful.spawn("rofi -show drun")
+	end, { description = "launch rofi drun", group = "felix" }),
+	awful.key({ modkey }, "Tab", function()
+		awful.spawn("rofi -show window")
+	end, { description = "launch rofi window", group = "felix" }),
 	awful.key({}, "#122", function()
 		awful.spawn("amixer -q sset Master 10%-")
 	end, { description = "decrease volume", group = "felix" }),
@@ -75,12 +78,6 @@ awful.keyboard.append_global_keybindings({
 	awful.key({ modkey }, "k", function()
 		awful.client.focus.byidx(-1)
 	end, { description = "focus previous by index", group = "client" }),
-	awful.key({ modkey }, "Tab", function()
-		awful.client.focus.history.previous()
-		if client.focus then
-			client.focus:raise()
-		end
-	end, { description = "go back", group = "client" }),
 	awful.key({ modkey, mod.ctrl }, "j", function()
 		awful.screen.focus_relative(1)
 	end, { description = "focus the next screen", group = "screen" }),
