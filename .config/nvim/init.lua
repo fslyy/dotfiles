@@ -23,4 +23,6 @@ table.insert(plugins, require("plugins/dashboard-nvim"))
 
 require("lazy").setup(plugins)
 
+vim.cmd("colorscheme hellwal")
+
 require("mappings")
