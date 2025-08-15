@@ -11,31 +11,20 @@ local themes_path = gfs.get_themes_dir() --/usr/share/awesome/themes/
 
 local theme = {}
 
+local hellwal_theme = dofile(os.getenv("HOME") .. "/.cache/hellwal/awesome.lua")
+
+for k, v in pairs(hellwal_theme) do
+	theme[k] = v
+end
+
 theme.font = "sans 9"
-
-theme.bg_normal = "#282828"
-theme.bg_focus = "#000000"
-theme.bg_urgent = "#282828"
-theme.bg_minimize = "#282828"
-theme.bg_systray = theme.bg_normal
-
-theme.fg_normal = "#d4be98"
-theme.fg_focus = "#d8a657"
-theme.fg_urgent = "#d4be98"
-theme.fg_minimize = "#e78a4e"
 
 theme.useless_gap = dpi(4)
 theme.border_width = dpi(2)
-theme.border_normal = "#56635f"
-theme.border_focus = "#56635f"
-theme.border_marked = "#91231c"
 
 -- notifications
-theme.notification_bg = "#282828"
-theme.notification_fg = "#d4be98"
 theme.notification_font = "FiraCode Nerd Font 12"
 theme.notification_border_width = 0
-theme.notification_border_color = "#282828"
 theme.notification_margin = 10
 theme.notification_width = nil
 theme.notification_height = nil
@@ -69,17 +58,6 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(taglist_square_
 -- menu_[border_color|border_width]
 theme.menu_height = dpi(15)
 theme.menu_width = dpi(100)
-
--- You can add as many variables as
--- you wish and access them by using
--- beautiful.variable in your rc.lua
---theme.bg_widget = "#cc0000"
-theme.hotkeys_bg = theme.bg_normal
-theme.hotkeys_fg = theme.fg_normal
-theme.hotkeys_label_bg = theme.fg_normal
-theme.hotkeys_label_fg = theme.bg_normal
-theme.hotkeys_border_color = theme.border_focus
-theme.hotkeys_modifiers_fg = theme.border_focus
 
 theme.menu_submenu_icon = themes_path .. "default/icons/submenu.png"
 theme.taglist_squares_sel = themes_path .. "default/icons/square_sel.png"
@@ -132,8 +110,6 @@ theme.titlebar_maximized_button_focus_active = themes_path .. "default/icons/tit
 theme.titlebar_maximized_button_normal_active = themes_path .. "default/icons/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_inactive = themes_path .. "default/icons/titlebar/maximized_focus_inactive.png"
 theme.titlebar_maximized_button_normal_inactive = themes_path .. "default/icons/titlebar/maximized_normal_inactive.png"
-
-theme.wallpaper = themes_path .. "default/wallpapers/gruvbox_bg.png"
 
 -- Generate Awesome icon:
 theme.awesome_icon = theme_assets.awesome_icon(theme.menu_height, theme.bg_focus, theme.fg_focus)

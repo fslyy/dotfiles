@@ -1,6 +1,6 @@
 #!/bin/sh
 
-hellwal -i Pictures/ --random
+hellwal -i Pictures/Wallpapers/ --random   
 
 source ~/.cache/hellwal/variables.sh
 
@@ -10,4 +10,7 @@ cp ~/.cache/hellwal/rofi.rasi ~/.config/rofi/config.rasi
 # Firefox
 cp ~/.cache/hellwal/pywalfox.json ~/.cache/wal/colors.json
 pywalfox update
+
+# restart Firefox
+awesome-client 'awesome.restart()'
 
