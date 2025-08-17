@@ -39,6 +39,4 @@ theme.taglist_bg_empty = "#%%background.hex%%"
 theme.tasklist_bg_focus = "#%%color0.hex%%"
 theme.tasklist_fg_focus = "#%%color15.hex%%"
 
-theme.wallpaper = "%%wallpaper%%"
-
 return theme

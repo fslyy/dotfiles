@@ -38,9 +38,12 @@ awful.keyboard.append_global_keybindings({
 	end, { description = "show the menubar", group = "launcher" }),
 
 	-- custom keybindings
+	awful.key({ modkey }, "0", function()
+		awful.spawn("/home/felix/.scripts/change_to_rndm_wallpaper.sh")
+	end, { description = "change random wallpaper and theme", group = "felix" }),
 	awful.key({ modkey }, "v", function()
-		awful.spawn("/home/felix/.scripts/change_wallpaper.sh")
-	end, { description = "change wallpaper", group = "felix" }),
+		awful.spawn("/home/felix/.scripts/colorscheme_change_menu.sh | rofi -dmenu")
+	end, { description = "open theme menu", group = "felix" }),
 	awful.key({ modkey }, "space", function()
 		awful.spawn("rofi -show drun")
 	end, { description = "launch rofi drun", group = "felix" }),
