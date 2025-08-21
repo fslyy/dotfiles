@@ -1,6 +1,8 @@
 #!/bin/sh
 
-MENU="gruvbox|tokyo-night"
+# Custom dmenu for changing colorscheme via hellwal themes
+
+MENU="random|gruvbox|tokyo-night|catppuccin"
 FONT_NAME="mono-space"
 FONT_SIZE=18
 
@@ -9,11 +11,19 @@ DIALOG_RESULT=$(echo $MENU | rofi -sep "|" -dmenu -i -p "Colorscheme" -hide-scro
 echo "This result is : $DIALOG_RESULT"
 sleep 1;
 
-if [ "$DIALOG_RESULT" = "gruvbox" ];
+if [ "$DIALOG_RESULT" = "random" ];
 then
-	exec ~/.scripts/change_to_selected_theme.sh gruvbox.hellwal
+  exec ~/.scripts/change_current_theme.sh
+
+elif [ "$DIALOG_RESULT" = "gruvbox" ];
+then
+	exec ~/.scripts/change_current_theme.sh gruvbox.hellwal
 
 elif [ "$DIALOG_RESULT" = "tokyo-night" ];
 then
-	exec ~/.scripts/change_to_selected_theme.sh tokyo-night.hellwal
+	exec ~/.scripts/change_current_theme.sh tokyo-night.hellwal
+
+elif [ "$DIALOG_RESULT" = "catppuccin" ];
+then
+	exec ~/.scripts/change_current_theme.sh catppuccin.hellwal
 fi

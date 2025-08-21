@@ -7,3 +7,4 @@ run() {
 }
 
 run "picom"
+run "$HOME/.fehbg"
