@@ -59,10 +59,7 @@ ruled.client.connect_signal("request::rules", function()
 	--    properties = { screen = 1, tag = '2' }
 	-- })
 	--
-	ruled.client.append_rule({
-		rule_any = { instance = { "polybar" } },
-		properties = { border_width = false, focusable = false },
-	})
+
 	-- firefox acting up -> forced tiling
 	ruled.client.append_rule({
 		rule_any = { class = "firefox" },
