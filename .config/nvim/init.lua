@@ -23,6 +23,11 @@ table.insert(plugins, require("plugins/dashboard-nvim"))
 
 require("lazy").setup(plugins)
 
-vim.cmd("colorscheme hellwal")
+vim.api.nvim_create_autocmd("BufWritePost", {
+	pattern = vim.fn.expand("~/.cache/hellwal/colors.vim"),
+	callback = function()
+		vim.cmd("colorscheme hellwal")
+	end,
+})
 
 require("mappings")

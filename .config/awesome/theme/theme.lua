@@ -5,7 +5,7 @@
 local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
-local gears = require("gears")
+local utf8 = require("utf8")
 
 local gfs = require("gears.filesystem")
 local themes_path = gfs.get_themes_dir() --/usr/share/awesome/themes/
@@ -48,6 +48,17 @@ theme.tasklist_spacing = 5
 -- menu_[border_color|border_width]
 theme.menu_height = dpi(15)
 theme.menu_width = dpi(100)
+
+theme.app_icons = {
+	["firefox"] = utf8.char(0xf0239),
+	["kitty"] = utf8.char(0xf489),
+	["obsidian"] = utf8.char(0xf039a),
+	["discord"] = utf8.char(0xf1ff),
+	["code-oss"] = utf8.char(0xe8da),
+	["steam"] = utf8.char(0xf1b6),
+}
+
+theme.app_icon_default = utf8.char(0xf4f6)
 
 theme.menu_submenu_icon = themes_path .. "default/icons/submenu.png"
 theme.taglist_squares_sel = themes_path .. "default/icons/square_sel.png"
