@@ -23,9 +23,6 @@ fi
 # first, restart awesome to apply theme
 awesome-client 'awesome.restart()'  
 
-# Rofi                                                                                        
-cp ~/.cache/hellwal/rofi.rasi ~/.config/rofi/config.rasi                                      
-                                                                                              
 # Firefox                                                                                     
 cp ~/.cache/hellwal/pywalfox.json ~/.cache/wal/colors.json                                    
 pywalfox update
@@ -36,4 +33,4 @@ cp ~/.cache/hellwal/obsidian-theme.css ~/Uni/.obsidian/themes/Hellwal/theme.css
 # qt5
 cp ~/.cache/hellwal/qt-colors.conf ~/.config/qt5ct/colors/qt-colors.conf 
 
-#kitty and vim automatically take colorcscheme (vim needs to relaunch)
+#kitty, vim, rofi use cache file in config
