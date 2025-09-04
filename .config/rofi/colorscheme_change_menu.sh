@@ -3,8 +3,8 @@
 # Custom dmenu for changing colorscheme via hellwal themes
 
 MENU="random|gruvbox|tokyo-night|catppuccin"
-FONT_NAME="mono-space"
-FONT_SIZE=18
+FONT_NAME="FiraCode Nerd Font"
+FONT_SIZE=14
 
 DIALOG_RESULT=$(echo $MENU | rofi -sep "|" -dmenu -i -p "Colorscheme" -hide-scrollbar -tokenize -lines 2 -width 50 -padding 50 -disable-history -font "$FONT_NAME $FONT_SIZE")
 

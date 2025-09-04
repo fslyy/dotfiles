@@ -39,7 +39,7 @@ awful.keyboard.append_global_keybindings({
 
 	-- custom keybindings
 	awful.key({ modkey }, "0", function()
-		awful.spawn("/home/felix/.scripts/colorscheme_change_menu.sh | rofi -dmenu")
+		awful.spawn("/home/felix/.config/rofi/colorscheme_change_menu.sh | rofi -dmenu")
 	end, { description = "launch rofi theme menu", group = "felix" }),
 	awful.key({ modkey }, "space", function()
 		awful.spawn("rofi -show drun")

@@ -1,29 +1,27 @@
 * {
-    active-background: #%% color2.hex %%;
-    active-foreground: #%% foreground.hex %%;
-    normal-background: #%% background.hex %%;
-    normal-foreground: #%% foreground.hex %%;
-    urgent-background: #%% color1.hex %%;
-    urgent-foreground: #%% foreground.hex %%;
-
-    alternate-active-background: #%% background.hex %%;
-    alternate-active-foreground: #%% foreground.hex %%;
-    alternate-normal-background: #%% background.hex %%;
-    alternate-normal-foreground: #%% foreground.hex %%;
-    alternate-urgent-background: #%% background.hex %%;
-    alternate-urgent-foreground: #%% foreground.hex %%;
-
-    selected-active-background: #%% color1.hex %%;
-    selected-active-foreground: #%% foreground.hex %%;
-    selected-normal-background: #%% color2.hex %%;
-    selected-normal-foreground: #%% foreground.hex %%;
-    selected-urgent-background: #%% color3.hex %%;
-    selected-urgent-foreground: #%% foreground.hex %%;
-
+    active-background:     #%% color2.hex %%;
+    active-foreground:     #%% color15.hex %%;
+    normal-background:     #%% color0.hex %%;
+    normal-background-transparent: #%% color0 %%cc;
+    normal-foreground:     #%% color7.hex %%;
+    urgent-background:     #%% color1.hex %%;
+    urgent-foreground:     #%% color15.hex %%;
+    alternate-active-background: #%% color8.hex %%;
+    alternate-active-foreground: #%% color15.hex %%;
+    alternate-normal-background: #%% color8.hex %%;
+    alternate-normal-foreground: #%% color7.hex %%;
+    alternate-urgent-background: #%% color9.hex %%;
+    alternate-urgent-foreground: #%% color15.hex %%;
+    selected-active-background:  #%% color4.hex %%;
+    selected-active-foreground:  #%% background.hex %%;
+    selected-normal-background:  #%% color2.hex %%;
+    selected-normal-foreground:  #%% background.hex %%;
+    selected-urgent-background:  #%% color3.hex %%;
+    selected-urgent-foreground:  #%% background.hex %%;
     background-color: #%% background.hex %%;
-    background: #%% background.hex %%;
-    foreground: #%% foreground.hex %%;
-    border-color: @active-background;
+    background:       #%% background.hex %%;
+    foreground:       #%% color7.hex %%;
+    border-color:     @active-background;
     spacing: 2;
 }
 
