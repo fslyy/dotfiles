@@ -21,7 +21,8 @@ client.connect_signal("focus", function(c)
 	c.border_color = beautiful.border_focus
 end)
 client.connect_signal("unfocus", function(c)
-	c.border_width = 0
+	c.border_width = 2
+	c.border_color = "#00000000" --Keep transparent border around unfocused windows to stop shifitng content
 end)
 
 -- diable gap when only 1 window active
