@@ -42,4 +42,8 @@ cp ~/.cache/hellwal/gtk.css ~/.themes/hellwal/gtk-3.0/gtk.css
 #gtk-2.0
 cp ~/.cache/hellwal/gtkrc ~/.themes/hellwal/gtk-2.0/gtkrc
 
+#spotify (spicetify - Comfy) 
+cp ~/.cache/hellwal/color.ini ~/.config/spicetify/Themes/Comfy/
+spicetify apply
+
 #kitty, vim, rofi use cache file in config
