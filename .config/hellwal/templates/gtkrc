@@ -1,0 +1,27 @@
+style "default" {
+    fg[NORMAL]      = "#%%color7%%"
+    fg[ACTIVE]      = "#%%color7%%"
+    fg[PRELIGHT]    = "#%%color15%%"
+    fg[SELECTED]    = "#%%color15%%"
+    fg[INSENSITIVE] = shade(0.6, "#%%color7%%")
+
+    bg[NORMAL]      = "#%%color0%%"
+    bg[ACTIVE]      = shade(1.2, "#%%color0%%")
+    bg[PRELIGHT]    = shade(1.1, "#%%color0%%")
+    bg[SELECTED]    = "#%%color2%%"
+    bg[INSENSITIVE] = shade(0.9, "#%%color0%%")
+
+    base[NORMAL]      = "#%%color0%%"
+    base[ACTIVE]      = shade(0.95, "#%%color0%%")
+    base[PRELIGHT]    = shade(0.9, "#%%color0%%")
+    base[SELECTED]    = "#%%color2%%"
+    base[INSENSITIVE] = shade(0.9, "#%%color0%%")
+
+    text[NORMAL]      = "#%%color7%%"
+    text[ACTIVE]      = "#%%color7%%"
+    text[PRELIGHT]    = "#%%color7%%"
+    text[SELECTED]    = "#%%color15%%"
+    text[INSENSITIVE] = shade(0.6, "#%%color7%%")
+}
+
+class "GtkWidget" style "default"

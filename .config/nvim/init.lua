@@ -7,6 +7,8 @@ o.shiftwidth = 2
 
 vim.g.mapleader = ","
 
+vim.opt.termguicolors = true
+
 require("lazy_setup")
 
 local plugins = {}
@@ -22,6 +24,8 @@ table.insert(plugins, require("plugins/which-key"))
 table.insert(plugins, require("plugins/dashboard-nvim"))
 
 require("lazy").setup(plugins)
+
+vim.cmd("colorscheme hellwal")
 
 vim.api.nvim_create_autocmd("BufWritePost", {
 	pattern = vim.fn.expand("~/.cache/hellwal/colors.vim"),

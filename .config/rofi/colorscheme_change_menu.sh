@@ -2,7 +2,7 @@
 
 # Custom dmenu for changing colorscheme via hellwal themes
 
-MENU="random|gruvbox|tokyo-night|catppuccin"
+MENU="random|gruvbox|tokyo-night|catppuccin|frieren"
 FONT_NAME="FiraCode Nerd Font"
 FONT_SIZE=14
 
@@ -26,4 +26,9 @@ then
 elif [ "$DIALOG_RESULT" = "catppuccin" ];
 then
 	exec ~/.scripts/change_current_theme.sh catppuccin.hellwal
+
+elif [ "$DIALOG_RESULT" = "frieren" ];
+then
+  exec ~/.scripts/change_current_theme.sh frieren.hellwal
+
 fi

@@ -27,10 +27,19 @@ awesome-client 'awesome.restart()'
 cp ~/.cache/hellwal/pywalfox.json ~/.cache/wal/colors.json                                    
 pywalfox update
 
+# code OSS
+cp ~/.cache/hellwal/vs-wal-colortheme.json ~/.vscode-oss/extensions/me.vs-wal-0.0.1/themes/vs-wal-colortheme.json
+
 # Obsidian
 cp ~/.cache/hellwal/obsidian-theme.css ~/Uni/.obsidian/themes/Hellwal/theme.css
 
 # qt5
-cp ~/.cache/hellwal/qt-colors.conf ~/.config/qt5ct/colors/qt-colors.conf 
+cp ~/.cache/hellwal/qt-colors.conf ~/.config/qt5ct/colors/qt-colors.conf
+
+#gtk-3.0
+cp ~/.cache/hellwal/gtk.css ~/.themes/hellwal/gtk-3.0/gtk.css
+
+#gtk-2.0
+cp ~/.cache/hellwal/gtkrc ~/.themes/hellwal/gtk-2.0/gtkrc
 
 #kitty, vim, rofi use cache file in config

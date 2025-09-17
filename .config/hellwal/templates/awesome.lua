@@ -16,7 +16,7 @@ theme.fg_minimize = "#%%color6.hex%%"
 -- Borders
 theme.border_width = 2
 theme.border_normal = "#%%color0.hex%%"
-theme.border_focus = "#%%color2.hex%%"
+theme.border_focus = "#%%foreground.hex%%"
 theme.border_marked = "#%%color3.hex%%"
 
 -- Titlebars
